@@ -8,8 +8,8 @@ Python-Move Is a Python program to move file automatic with help of Python 3.0+.
  - Put in Downlod Folder
  - Open __init__.py and Give Full RooT to Your Download Folder Like This at Line 21
  
- root = 'C:/Users/User/Downloads'
- 
+root = 'C:/Users/User/Downloads'
+
  ## Installation
 
 - This is A python 3 pacakge.
@@ -44,7 +44,6 @@ Show your appreciation to those who have contributed to the project.
 For open source projects,Under MIT License.
 
 ## Project status
-![](https://raw.githubusercontent.com/codePerfectPlus/Python-Move/master/Screenshot%20(86).png)
 
 ## Author
 - Module : python-move
