@@ -6,9 +6,9 @@ Python-Move Is a Python program to move file automatic with help of Python 3.0+.
 
 # Warning
  - Put in Downlod Folder
- - Open __init__.py and Give Full ROOT to Your Download Folder Like This at Line 21
+ - Open __init__.py and Give Full RooT to Your Download Folder Like This at Line 21
  
- ROOT = 'C:/Users/Flash/Downloads'
+ root = 'C:/Users/Flash/Downloads'
  
  ## Installation
 
