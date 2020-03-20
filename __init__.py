@@ -18,7 +18,7 @@ import shutil
 Warning:
     1.Change Your Root Here
 '''
-root = 'C:/Users/Flash/Downloads'
+root = 'C:/Users/User/Downloads'
 
 paths = [f'{root}/Moved Python',
         f'{root}/Moved Picture',
