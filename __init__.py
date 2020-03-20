@@ -20,8 +20,12 @@ Warning:
 '''
 root = 'C:\\Users\\Flash\\Pictures\\Screenshots\\'
 
-paths = [f'{root}Moved Python',f'{root}Moved Picture',
-f'{root}Moved Video',f'{root}Moved Pdf',f'{root}README']
+paths = [f'{root}Moved Python',
+        f'{root}Moved Picture',
+        f'{root}Moved Video',
+        f'{root}Moved Pdf',
+        f'{root}Moved Text',
+        f'{root}README']
 for path in paths:
     try:  
         os.mkdir(path)  
@@ -45,6 +49,10 @@ class Move():
                 print('_'*30)
             elif f[-3:] == 'png':
                 shutil.move(f,f'Moved Picture')
+                print(f"Moving {f}")
+                print('_'*30)
+            elif f[-3:] == 'txt':
+                shutil.move(f,f'Moved Text')
                 print(f"Moving {f}")
                 print('_'*30)
             elif f[-3:] == 'pdf':
