@@ -18,22 +18,24 @@ import shutil
 Warning:
     1.Change Your Root Here
 '''
-root = 'C:\\Users\\Flash\\Downloads\\'
+root = 'C:/Users/Flash/Downloads'
 
-paths = [f'{root}Moved Python',
-        f'{root}Moved Picture',
-        f'{root}Moved Video',
-        f'{root}Moved Pdf',
-        f'{root}Moved Text',
-        f'{root}README']
+paths = [f'{root}/Moved Python',
+        f'{root}/Moved Picture',
+        f'{root}/Moved Video',
+        f'{root}/Moved Pdf',
+        f'{root}/Moved Text',
+        f'{root}/README']
 for path in paths:
     try:  
         os.mkdir(path)  
     except OSError as error:  
-        print(error)   
+        print(f'{path[36:]} - File Already Exists Sir !')
+        print('*'*40)
+        
 #create Python file
 
-f=open("README\\README.txt", "a+")
+f=open("README/README.txt", "a+")
 f.write(head)
 f.close()
 
