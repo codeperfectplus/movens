@@ -14,18 +14,12 @@ import os
 from os import path
 import shutil
 
-''' 
-Warning:
-    1.Change Your Root Here
-'''
-root = 'C:/Users/User/Downloads'
-
-paths = [f'{root}/Moved Python',
-        f'{root}/Moved Picture',
-        f'{root}/Moved Video',
-        f'{root}/Moved Pdf',
-        f'{root}/Moved Text',
-        f'{root}/README']
+paths = ['Moved Python',
+        'Moved Picture',
+        'Moved Video',
+        'Moved Pdf',
+        'Moved Text',
+        'README']
 for path in paths:
     try:  
         os.mkdir(path)  
