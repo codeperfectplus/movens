@@ -12,65 +12,42 @@ Github : https://github.com/codePerfectPlus
 '''
 import os
 from os import path
-import shutil
+from shutil import move
 
 paths = ['Moved Python',
         'Moved Picture',
         'Moved Video',
         'Moved Pdf',
-        'Moved Text',
-        'README']
-for path in paths:
+        'Moved Music'
+        'CodePerfectPlus']
+for root in paths:
     try:  
-        os.mkdir(path)  
+        os.mkdir(root)  
     except OSError as error:  
-        print(f'{path[36:]} - File Already Exists Sir !')
-        print('*'*40)
+        print('Folder Already Exists')
         
-#create Python file
+pic = ['.jpeg','.jpg','png','gif','tiff','raw']
+vid = ['.mp4','.webm','.mkv','.MPG', '.MP2', '.MPEG', '.MPE', '.MPV', '.OGG', '.M4P', '.M4V', '.AVI', '.WMV', '.MOV', '.QT', '.FLV', '.SWF','.AVCHD']
+pytho =['.py','.ipynb','.java']
+txt = ['.txt','.pdf']
+music = [ '.WAV', '.AIF', '.MP3','.MID']
+def start():
+    for f in os.listdir():
+        name , ex = path.splitext(f)
+        for i in range(len(pic)):
+            if ex == pic[i]:
+                move(f,'Moved Picture')
+        for i in range(len(vid)):
+            if ex == vid[i]:
+                move(f,'Moved Video')
+        for i in range(len(pytho)):
+            if ex == pytho[i]:
+                move(f,'Moved Python')
+        for i in range(len(txt)):
+            if ex == txt[i]:
+                move(f,'Moved Pdf')
+        for i in range(len(music)):
+            if ex == music[i]:
+                move(f,'Moved Music')
+start()
 
-f=open("README/README.txt", "a+")
-f.write(head)
-f.close()
-
-class Move():
-    def __init__(self):
-        print('We Are Starting Moving Out Files')
-
-    def start(self):
-        for f in os.listdir():
-            if f[-5:] == 'ipynb':
-                shutil.move(f,f'Moved Python')
-                print(f"Moving {f}")
-                print('_'*30)
-            elif f[-3:] == 'png':
-                shutil.move(f,f'Moved Picture')
-                print(f"Moving {f}")
-                print('_'*30)
-            elif f[-3:] == 'txt':
-                shutil.move(f,f'Moved Text')
-                print(f"Moving {f}")
-                print('_'*30)
-            elif f[-3:] == 'pdf':
-                shutil.move(f,f'moved pdf')
-                print(f"Moving {f}")
-                print('_'*30)
-            elif f[-4:] == 'jpeg':
-                shutil.move(f,f'Moved Picture')
-                print(f"Moving {f}")
-                print('_'*30)
-            elif f[-3:] == 'jpg':
-                shutil.move(f,f'Moved Picture')
-                print(f"Moving {f}")
-                print('_'*30)
-            elif f[-3:] == 'mp4':
-                shutil.move(f,f'Moved Video')
-                print(f"Moving {f}")
-                print('_'*30)
-        else:
-            print('*'*40)
-            print('Sir ! All Files Are Moved Now')
-            print('*'*40)
-
-if __name__ == '__main__':
-    Move().start()
