@@ -1,4 +1,4 @@
-head = '''Python program to move file from one folder to another folder.
+'''Python program to move file from one folder to another folder.
 @author : CodePerfectPLus
 @language : Python 3
 Website : http://codeperfectplus.github.io/
@@ -14,10 +14,7 @@ import os
 from os import path
 from shutil import move
 import tkinter as tk
-''' 
-Warning:
-    1.Change Your Root Here
-'''
+
 
 def create_folder():
     paths = ['Moved Python',

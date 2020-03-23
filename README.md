@@ -15,7 +15,7 @@ Python-Move Is a Python program to move file automatic with help of Python 3.0+.
 - This is A python 3 pacakge.
 - Install python 3.0+ or Anaconda 3.0+
 - Run Normal file without any Additional package
--  Pip install tkinter for GUI File
+
 ## Usage
 Python-Move Is a Python program to move file automatic with help of python.
 Python is a scripting Language.

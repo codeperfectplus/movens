@@ -1,4 +1,4 @@
-head = '''Python program to move file from one folder to another folder.
+'''Python program to move file from one folder to another folder.
 @author : CodePerfectPLus
 @language : Python 3
 Website : http://codeperfectplus.github.io/
