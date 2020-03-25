@@ -3,7 +3,7 @@
 @language : Python 3
 Website : http://codeperfectplus.github.io/
 Github : https://github.com/codePerfectPlus
-  ______            __         ____               ____             __     ____   __            
+   ______            __         ____               ____             __     ____   __            
   / ____/____   ____/ /___     / __ \ ___   _____ / __/___   _____ / /_   / __ \ / /__  __ _____
  / /    / __ \ / __  // _ \   / /_/ // _ \ / ___// /_ / _ \ / ___// __/  / /_/ // // / / // ___/
 / /___ / /_/ // /_/ //  __/  / ____//  __// /   / __//  __// /__ / /_   / ____// // /_/ /(__  ) 
@@ -52,14 +52,26 @@ def start():
             if ex == music[i]:
                 move(f,'Moved Music')
 
-window = tk.Tk()
-window.rowconfigure(1,minsize=100,weight=1)
-window.columnconfigure(1,minsize=100,weight=1)
+# Gui        
+effects=tk.GROOVE
 
-btn = tk.Button(text='Move Now',command=start,bg='red')
-btn2 = tk.Button(text='Create Folder',command=create_folder,bg='green')
-lbl = tk.Label(text='Warning \n First Create Folder Then Click On Move',fg='red',bg='white')
-lbl.grid(row=0,column=0,sticky='w')
-btn2.grid(row=1,column=0,sticky='nsew')
-btn.grid(row=1,column=1,sticky= 'nsew')
+window = tk.Tk()
+
+frame_a = tk.Frame(master=window,width=80,relief=effects,borderwidth=5)
+frame_b = tk.Frame(master=window,width=80,relief=effects,borderwidth=5)
+
+frame_a.grid(row =1, column=1)
+frame_b.grid(row=2,column=1)
+
+window.rowconfigure(2,minsize=300,weight=1)
+window.columnconfigure(1,minsize=300,weight=1)
+
+
+btn = tk.Button(master=frame_a,text='Create Folder',command=create_folder,bg='green',width=20,height=5)
+btn2 = tk.Button(master=frame_b,text='Move Now',command=start,bg='red',width=20,height=5)
+lbl = tk.Label(master=window,text='Warning \n First Create Folder Then Click On Move',fg='red',bg='black',width=50)
+
+lbl.grid(row=0,column=1)
+btn.grid(row=1,column=0)
+btn2.grid(row=1,column=1)
 window.mainloop()
