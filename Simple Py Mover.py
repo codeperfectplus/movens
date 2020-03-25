@@ -18,7 +18,7 @@ paths = ['Moved Python',
         'Moved Picture',
         'Moved Video',
         'Moved Pdf',
-        'Moved Music'
+        'Moved Music',
         'CodePerfectPlus']
 for root in paths:
     try:  

@@ -21,7 +21,7 @@ def create_folder():
         'Moved Picture',
         'Moved Video',
         'Moved Pdf',
-        'Moved Music'
+        'Moved Music',
         'CodePerfectPlus']
     for root in paths:
         try:  
@@ -30,9 +30,9 @@ def create_folder():
             print('Folder Already Exists')
 pic = ['.jpeg','.jpg','png','gif','tiff','raw']
 vid = ['.mp4','.webm','.mkv','.MPG', '.MP2', '.MPEG', '.MPE', '.MPV', '.OGG', '.M4P', '.M4V', '.AVI', '.WMV', '.MOV', '.QT', '.FLV', '.SWF','.AVCHD']
-pytho =['.py','.ipynb','.java']
+pytho =['.ipynb','.java']
 txt = ['.txt','.pdf']
-music = [ '.WAV', '.AIF', '.MP3','.MID']
+music = [ '.WAV', '.aif', '.mp3','.mid']
 def start():
     for f in os.listdir():
         name , ex = path.splitext(f)
