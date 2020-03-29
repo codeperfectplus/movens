@@ -26,7 +26,7 @@ for root in paths:
     except OSError as error:  
         print('Folder Already Exists')
         
-pic = ['.jpeg','.jpg','png','gif','tiff','raw']
+pic = ['.jpeg','.jpg','.png','.gif','.tiff','.raw']
 vid = ['.mp4','.webm','.mkv','.MPG', '.MP2', '.MPEG', '.MPE', '.MPV', '.OGG', '.M4P', '.M4V', '.AVI', '.WMV', '.MOV', '.QT', '.FLV', '.SWF','.AVCHD']
 pytho =['.py','.ipynb','.java']
 txt = ['.txt','.pdf']

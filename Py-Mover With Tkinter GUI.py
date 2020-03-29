@@ -28,8 +28,9 @@ def create_folder():
             os.mkdir(root)  
         except OSError as error:  
             print('Folder Already Exists')
-pic = ['.jpeg','.jpg','png','gif','tiff','raw']
-vid = ['.mp4','.webm','.mkv','.MPG', '.MP2', '.MPEG', '.MPE', '.MPV', '.OGG', '.M4P', '.M4V', '.AVI', '.WMV', '.MOV', '.QT', '.FLV', '.SWF','.AVCHD']
+pic = ['.jpeg','.jpg','.png','.gif','.tiff','.raw']
+vid = ['.mp4','.webm','.mkv','.MPG', '.MP2', '.MPEG', '.MPE', '.MPV', '.OGG', '.M4P', '.M4V', '.AVI',
+ '.WMV', '.MOV', '.QT', '.FLV', '.SWF','.AVCHD']
 pytho =['.ipynb','.java']
 txt = ['.txt','.pdf']
 music = [ '.WAV', '.aif', '.mp3','.mid']
