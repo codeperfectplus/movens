@@ -17,7 +17,7 @@ Python-Move Is a Python program to move file automatic with help of Python 3.0+.
 - Run Normal file without any Additional package
 
 ## Usage
-Python-Move Is a Python program to move file automatic with help of python.
+FileMover Is a Python program to move files automatically with the help of Python.
 Python is a scripting Language.
 
 ## Support
