@@ -1,8 +1,8 @@
 # FileMover
- Python-Move Program To Move TextFile,Image,Video Automaticlly
+ Python Automation To Arrange Files In One Click
 
 ##### Introduction
-Python-Move Is a Python program to move file automatic with help of Python 3.0+.
+Python Automation To Arrange Files In One Click with help of Python 3.0+.
 
 # How To Run 
  - Put in Downlod Folder Or Wherever You want to automaticlly move file and Just run
