@@ -1,35 +1,55 @@
 # FileMover
- Python Automation To Arrange Files In One Click
 
-##### Introduction
-Python Automation To Arrange Files In One Click with help of Python 3.0+.
+- [FileMover](#filemover)
+  - [Introduction](#introduction)
+  - [How To Run](#how-to-run)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Support](#support)
+  - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
+  - [Authors and acknowledgment](#authors-and-acknowledgment)
+  - [License](#license)
+  - [Project status](#project-status)
+  - [Author](#author)
 
-# How To Run 
- - Put in Downlod Folder Or Wherever You want to automaticlly move file and Just run
- - To use with GUI install Tkinter
 
-![](https://raw.githubusercontent.com/codePerfectPlus/Python-Move/master/Py-Mover%20GUI.png)
+## Introduction
+
+Python Automation To Arrange Files In One Click with the help of Python 3.0+.
+
+## How To Run
+
+- Put in Download Folder Or Wherever You want to automatically move the file and Just run
+- To use with GUI install Tkinter
+
+![File mover](https://raw.githubusercontent.com/codePerfectPlus/Python-Move/master/Py-Mover%20GUI.png)
 
 ## Installation
 
-- This is A python 3 pacakge.
-- Install python 3.0+ or Anaconda 3.0+
+- This is A python 3 package.
+- Install Python 3.0+ or Anaconda 3.0+
 - Run Normal file without any Additional package
 
 ## Usage
+
 FileMover Is a Python program to move files automatically with the help of Python.
 Python is a scripting Language.
 
 ## Support
+
 Cotributors for the Project
 [CodePerfectPLus](https://github.com/codePerfectPlus)
 ...
 
 ## Roadmap
-what's new in future update
-- More File Extension will be add soon
+
+what's new in a future update
+
+- More File Extension will be added soon
 
 ## Contributing
+
 Before submitting a bug, please do the following:
 
 Perform basic troubleshooting steps:
@@ -39,17 +59,19 @@ Perform basic troubleshooting steps:
 - Try switching up dependency versions. If the software in question has dependencies (other libraries, etc) try upgrading/downgrading those as well.
 
 ## Authors and acknowledgment
+
 Show your appreciation to those who have contributed to the project.
 
 ## License
-For open source projects,Under MIT License.
+
+For open-source projects, Under MIT License.
 
 ## Project status
 
 ## Author
-- Module : python-move
-- Author  : CodePerfectPlus
-- Language : Python
-- Github : https://github.com/codePerfectPlus
-- Website : http://codeperfectplus.github.io/
 
+- Module: python-move
+- Author  : CodePerfectPlus
+- Language: Python
+- Github: <https://github.com/codePerfectPlus>
+- Website: <http://codeperfectplus.github.io/>
