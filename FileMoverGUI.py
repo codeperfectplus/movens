@@ -34,7 +34,7 @@ pic = ['.jpeg','.jpg','.png','.gif','.tiff','.raw']
 pytho =['.ipynb','.java','.cs','.js']
 txt = ['.txt','.pdf','.doc', '.pdf', '.ppt', '.pps', '.docx', '.pptx']
 music = [ '.mp3', '.wav', '.wma', '.mpa', '.ram', '.ra', '.aac', '.aif', '.m4a', '.tsa']
-zip = ['.zip', '.rar', '.arj', '.gz', '.sit', '.sitx', '.sea', '.ace', '.bz2', '.7z']
+zips = ['.zip', '.rar', '.arj', '.gz', '.sit', '.sitx', '.sea', '.ace', '.bz2', '.7z']
 app = ['.exe','.msi']
 vid = ['.mp4','.webm','.mkv','.MPG', '.MP2', '.MPEG', '.MPE', '.MPV', '.OGG', '.M4P', '.M4V',
        '.WMV', '.MOV', '.QT', '.FLV', '.SWF','.AVCHD','.avi', '.mpg', '.mpe', '.mpeg', '.asf', '.wmv', '.mov', '.qt', '.rm']
@@ -60,8 +60,8 @@ def start():
         for i in range(len(app)):
             if ex == app[i]:
                 move(f,'Application')
-        for i in range(len(zip)):
-            if ex == zip[i]:
+        for i in range(len(zips)):
+            if ex == zips[i]:
                 move(f,'Compressed')
 
 
