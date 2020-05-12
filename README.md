@@ -23,8 +23,6 @@ Python Automation To Arrange Files In One Click with the help of Python 3.0+.
 - Put in Download Folder Or Wherever You want to automatically move the file and Just run
 - To use with GUI install Tkinter
 
-![File mover](https://raw.githubusercontent.com/codePerfectPlus/Python-Move/master/Py-Mover%20GUI.png)
-
 ## Installation
 
 - This is A python 3 package.
