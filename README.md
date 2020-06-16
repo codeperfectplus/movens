@@ -1,5 +1,9 @@
 # FileMover
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)   
+
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)&nbsp;
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)&nbsp;
+![Update](https://img.shields.io/badge/update-monthly-green.svg)&nbsp;
+
 - [FileMover](#filemover)
   - [Introduction](#introduction)
   - [How To Run](#how-to-run)
@@ -13,15 +17,14 @@
   - [Project status](#project-status)
   - [Author](#author)
 
-
 ## Introduction
 
-Python Automation To Arrange Files In One Click with the help of Python 3.0+.
+Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Python Automation To Arrange Files In One Click with the help of Python 3.0+.
 
 ## How To Run
 
 - Put in Download Folder Or Wherever You want to automatically move the file and Just run
-- To use with GUI install Tkinter
+- To use with GUI install Tkinter  ```pip install tkinter```
 
 ## Installation
 
@@ -38,7 +41,7 @@ Python is a scripting Language.
 
 Cotributors for the Project
 [CodePerfectPLus](https://github.com/codePerfectPlus)
-...
+Want to Contribute in project.Check Github Contribution Guide.
 
 ## Roadmap
 
@@ -52,9 +55,11 @@ Before submitting a bug, please do the following:
 
 Perform basic troubleshooting steps:
 
-- Make sure you are on the latest version. If you are not on the most recent version, your problem may have been solved already! Upgrading is always the best first step.
-- Try older versions. If you are already on the latest release, try rolling back a few minor versions (e.g. if on 1.7, try 1.5 or 1.6) and see if the problem goes away. This will help the devs narrow down when the problem first arose in the commit log.
-- Try switching up dependency versions. If the software in question has dependencies (other libraries, etc) try upgrading/downgrading those as well.
+- ### Make sure you are on the latest version. If you are not on the most recent version, your problem may have been solved already! Upgrading is always the best first step
+
+- ### Try older versions. If you are already on the latest release, try rolling back a few minor versions (e.g. if on 1.7, try 1.5 or 1.6) and see if the problem goes away. This will help the devs narrow down when the problem first arose in the commit log
+
+- ### Try switching up dependency versions. If the software in question has dependencies (other libraries, etc) try upgrading/downgrading those as well
 
 ## Authors and acknowledgment
 
@@ -72,4 +77,4 @@ For open-source projects, Under MIT License.
 - Author  : CodePerfectPlus
 - Language: Python
 - Github: <https://github.com/codePerfectPlus>
-- Website: <http://codeperfectplus.github.io/>
+- Website: <http://codeperfectplus.herokuapp.com/>
