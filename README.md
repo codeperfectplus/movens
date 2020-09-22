@@ -24,18 +24,24 @@ Python is an interpreted, high-level, general-purpose programming language. Crea
 ## How To Run
 
 - Put in Download Folder Or Wherever You want to automatically move the file and Just run
-- To use with GUI install Tkinter  ```pip install tkinter```
+
+For CLI
+```bash
+python filemover.py
+```
+For GUI
+```bash
+python filemovergui.py
+```
 
 ## Installation
 
 - This is A python 3 package.
 - Install Python 3.0+ or Anaconda 3.0+
-- Run Normal file without any Additional package
 
 ## Usage
 
-FileMover Is a Python program to move files automatically with the help of Python.
-Python is a scripting Language.
+FileMover Is a Python program to move files automatically with the help of Python. This will help you to manage your download folder for automatic cleanup.
 
 ## Support
 
@@ -48,6 +54,7 @@ Want to Contribute in project.Check Github Contribution Guide.
 what's new in a future update
 
 - More File Extension will be added soon
+- Contributions are welcome
 
 ## Contributing
 
@@ -73,8 +80,8 @@ For open-source projects, Under MIT License.
 
 ## Author
 
-- Module: python-move
-- Author  : CodePerfectPlus
+- Module: FileMoverGUI
+- Author  : Py-Contributors
 - Language: Python
 - Github: <https://github.com/codePerfectPlus>
 - Website: <http://codeperfectplus.herokuapp.com/>

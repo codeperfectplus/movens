@@ -25,8 +25,7 @@ def create_folder():
         "Picture",
         "Video",
         "Documents",
-        "Music",
-        "CodePerfectPlus",
+        "Music",        
     ]
     for root in paths:
         try:
@@ -43,7 +42,7 @@ zips = [".zip", ".rar", ".arj", ".gz", ".sit", ".sitx", ".sea", ".ace", ".bz2", 
 app = [".exe", ".msi"]
 vid = [".mp4",".webm",".mkv",".MPG",".MP2",".MPEG",".MPE",".MPV",".OGG",".M4P",".M4V",
     ".WMV",".MOV",".QT",".FLV",".SWF",".AVCHD",".avi",".mpg",".mpe",".mpeg",".asf",
-    ".wmv",".mov",".qt",".rm",]
+    ".wmv",".mov",".qt",".rm",]"CodePerfectPlus",
 
 def start():
     for files in os.listdir():
@@ -70,42 +69,42 @@ def start():
             if ex == zips[i]:
                 move(files, "Compressed")
 
+if __name__ == "__main__":      
+    # Gui
+    effects = tk.RAISED
 
-# Gui
-effects = tk.RAISED
+    window = tk.Tk()
 
-window = tk.Tk()
+    frame_a = tk.Frame(master=window, width=80, relief=effects, borderwidth=8)
+    frame_b = tk.Frame(master=window, width=80, relief=effects, borderwidth=9)
 
-frame_a = tk.Frame(master=window, width=80, relief=effects, borderwidth=8)
-frame_b = tk.Frame(master=window, width=80, relief=effects, borderwidth=9)
+    frame_a.grid(row=1, column=1)
+    frame_b.grid(row=2, column=1)
 
-frame_a.grid(row=1, column=1)
-frame_b.grid(row=2, column=1)
-
-window.rowconfigure(2, minsize=300, weight=1)
-window.columnconfigure(1, minsize=300, weight=1)
+    window.rowconfigure(2, minsize=300, weight=1)
+    window.columnconfigure(1, minsize=300, weight=1)
 
 
-btn = tk.Button(
-    master=frame_a,
-    text="Create Folder",
-    command=create_folder,
-    bg="green",
-    width=20,
-    height=5,
-)
-btn2 = tk.Button(
-    master=frame_b, text="Move Now", command=start, bg="red", width=20, height=5
-)
-lbl = tk.Label(
-    master=window,
-    text="Warning \n First Create Folder Then Click On Move",
-    fg="red",
-    bg="black",
-    width=50,
-)
+    btn = tk.Button(
+        master=frame_a,
+        text="Create Folder",
+        command=create_folder,
+        bg="green",
+        width=20,
+        height=5,
+    )
+    btn2 = tk.Button(
+        master=frame_b, text="Move Now", command=start, bg="red", width=20, height=5
+    )
+    lbl = tk.Label(
+        master=window,
+        text="Warning \n First Create Folder Then Click On Move",
+        fg="red",
+        bg="black",
+        width=50,
+    )
 
-lbl.grid(row=0, column=1)
-btn.grid(row=1, column=0)
-btn2.grid(row=1, column=1)
-window.mainloop()
+    lbl.grid(row=0, column=1)
+    btn.grid(row=1, column=0)
+    btn2.grid(row=1, column=1)
+    window.mainloop()

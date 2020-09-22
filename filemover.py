@@ -21,8 +21,7 @@ paths = [
     "Picture",
     "Video",
     "Documents",
-    "Music",
-    "CodePerfectPlus",
+    "Music",    
 ]
 for root in paths:
     try:
