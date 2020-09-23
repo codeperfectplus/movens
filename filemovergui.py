@@ -42,7 +42,7 @@ zips = [".zip", ".rar", ".arj", ".gz", ".sit", ".sitx", ".sea", ".ace", ".bz2", 
 app = [".exe", ".msi"]
 vid = [".mp4",".webm",".mkv",".MPG",".MP2",".MPEG",".MPE",".MPV",".OGG",".M4P",".M4V",
     ".WMV",".MOV",".QT",".FLV",".SWF",".AVCHD",".avi",".mpg",".mpe",".mpeg",".asf",
-    ".wmv",".mov",".qt",".rm",]"CodePerfectPlus",
+    ".wmv",".mov",".qt",".rm",]
 
 def start():
     for files in os.listdir():
