@@ -1,15 +1,22 @@
-"""Python program to move file from one folder to another folder.
-@author : CodePerfectPLus
-@language : Python 3
-Website : http://codeperfectplus.herokuapp.com/
-Github : https://github.com/codePerfectPlus
+print(r"""
    ______            __         ____               ____             __     ____   __            
   / ____/____   ____/ /___     / __ \ ___   _____ / __/___   _____ / /_   / __ \ / /__  __ _____
  / /    / __ \ / __  // _ \   / /_/ // _ \ / ___// /_ / _ \ / ___// __/  / /_/ // // / / // ___/
 / /___ / /_/ // /_/ //  __/  / ____//  __// /   / __//  __// /__ / /_   / ____// // /_/ /(__  ) 
-\____/ \____/ \__,_/ \___/  /_/     \___//_/   /_/   \___/ \___/ \__/  /_/    /_/ \__,_//____/  
-
-"""
+\____/ \____/ \__,_/ \___/  /_/     \___//_/   /_/   \___/ \___/ \__/  /_/    /_/ \__,_//____/    1.0.3
+    
+   |_____________________________________________________________________________________|
+  | || This Program will move files according to their extension in respective folders.|||
+  |--------------------------------------------------------------------------------------|
+  | //                                     Version : 1.0.3                             //|
+  | //                                  Programming : Python3                          //|
+  | //                                GitHub : pycontributors                          //|
+  | //                                Author : Py-Contributors                         //|  
+  | //                             Email : pycontributors@gmail.com                    //|
+  | //                          Telegram : https://t.me/pycontributors                 //|
+  | //                       Website : http://codeperfectplus.herokuapp.com            //|
+  |  --------------------------------------------------------------------------------------
+""")
 import os
 from os import path
 from shutil import move
@@ -41,7 +48,7 @@ vid = [".mp4",".webm",".mkv",".MPG",".MP2",".MPEG",".MPE",".MPV",".OGG",".M4P","
     ".wmv",".mov",".qt",".rm",]
 torrents = [".torrent"]
 
-def move(arr,name,ex,file):
+def transfer(arr,name,ex,file):
     for i in range(len(arr)):
         if ex == arr[i]:
             move(file,name)
@@ -50,15 +57,16 @@ def start():
     for files in os.listdir():
         try:
             _, ex = path.splitext(files)
-            move(pic,"Picture",ex,files);
-            move(vid,"Video",ex,files);
-            move(pytho,"Programming File",ex,files);
-            move(txt,"Documents",ex,files);
-            move(music,"Music",ex,files)
-            move(torrents,"Torrents",ex,files);
-            move(txt,"Application",ex,files);
-            move(zip,"Compressed",ex,files)
-        except:
+            transfer(pic,"Picture",ex,files)
+            transfer(vid,"Video",ex,files)
+            transfer(pytho,"Programming File",ex,files)
+            transfer(txt,"Documents",ex,files)
+            transfer(music,"Music",ex,files)
+            transfer(torrents,"Torrents",ex,files)
+            transfer(txt,"Application",ex,files)
+            transfer(zip,"Compressed",ex,files)
+        except KeyError as error:
+            print(error)
             print("Couldn't move file ", files)
 
 if __name__ == "__main__":
