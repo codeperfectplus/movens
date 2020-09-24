@@ -13,22 +13,25 @@ Github : https://github.com/codePerfectPlus
 import os
 from os import path
 from shutil import move
+import tkinter as tk
 
-paths = [
-    "Programming File",
-    "Compressed",
-    "Application",
-    "Picture",
-    "Video",
-    "Documents",
-    "Music",    
-    "Torrents"
-]
-for root in paths:
-    try:
-        os.mkdir(root)
-    except OSError:
-        print("Folder Already Exists")
+
+def create_folder():
+    paths = [
+        "Programming File",
+        "Compressed",
+        "Application",
+        "Picture",
+        "Video",
+        "Documents",
+        "Music",    
+        "Torrents"
+    ]
+    for root in paths:
+        try:
+            os.mkdir(root)
+        except OSError:
+            print("Folder Already Exists")
 
 pic = [".jpeg", ".jpg", ".png", ".gif", ".tiff", ".raw", ".webp", ".jfif", ".ico", ".psd", ".svg", ".ai"]
 pytho = [".ipynb", ".java", ".cs", ".js", ".vsix",".jar"]
