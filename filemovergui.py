@@ -21,55 +21,7 @@ import os
 from os import path
 from shutil import move
 import tkinter as tk
-
-
-def create_folder():
-    paths = [
-        "Programming File",
-        "Compressed",
-        "Application",
-        "Picture",
-        "Video",
-        "Documents",
-        "Music",    
-        "Torrents"
-    ]
-    for root in paths:
-        try:
-            os.mkdir(root)
-        except OSError:
-            print("Folder Already Exists")
-
-pic = [".jpeg", ".jpg", ".png", ".gif", ".tiff", ".raw", ".webp", ".jfif", ".ico", ".psd", ".svg", ".ai"]
-pytho = [".ipynb", ".java", ".cs", ".js", ".vsix",".jar"]
-txt = [".txt", ".pdf", ".doc", ".pdf", ".ppt", ".pps", ".docx", ".pptx"]
-music = [".mp3", ".wav", ".wma", ".mpa", ".ram", ".ra", ".aac", ".aif", ".m4a", ".tsa"]
-zip = [".zip", ".rar", ".arj", ".gz", ".sit", ".sitx", ".sea", ".ace", ".bz2", ".7z"]
-app = [".exe", ".msi"]
-vid = [".mp4",".webm",".mkv",".MPG",".MP2",".MPEG",".MPE",".MPV",".OGG",".M4P",".M4V",
-    ".WMV",".MOV",".QT",".FLV",".SWF",".AVCHD",".avi",".mpg",".mpe",".mpeg",".asf",
-    ".wmv",".mov",".qt",".rm",]
-torrents = [".torrent"]
-
-def transfer(arr,name,ex,file):
-    for i in range(len(arr)):
-        if ex == arr[i]:
-            move(file,name)
-
-def start():
-    for files in os.listdir():
-        try:
-            _, ex = path.splitext(files)
-            transfer(pic,"Picture",ex,files)
-            transfer(vid,"Video",ex,files)
-            transfer(pytho,"Programming File",ex,files)
-            transfer(txt,"Documents",ex,files)
-            transfer(music,"Music",ex,files)
-            transfer(torrents,"Torrents",ex,files)
-            transfer(txt,"Application",ex,files)
-            transfer(zip,"Compressed",ex,files)
-        except:
-            print("Couldn't move file ", files)
+from filemover import create_folder, start
 
 
 if __name__ == "__main__":      
