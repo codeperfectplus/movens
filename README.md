@@ -6,6 +6,8 @@
 
 - [FileMover](#filemover)
   - [Introduction](#introduction)
+    - [Python](#python)
+    - [FileMover](#filemover-1)
   - [How To Run](#how-to-run)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -19,17 +21,26 @@
 
 ## Introduction
 
+### Python
+
 Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Python Automation To Arrange Files In One Click with the help of Python 3.0+.
+
+### FileMover
+
+This tool allows automatic file moving, each file to the folder that corresponds to its extension (e.g. ".jpg" ==> "/Pictures", ".mp4" ==> "/Videos")
 
 ## How To Run
 
 - Put in Download Folder Or Wherever You want to automatically move the file and Just run
 
 For CLI
+
 ```bash
 python filemover.py
 ```
+
 For GUI
+
 ```bash
 python filemovergui.py
 ```
@@ -47,7 +58,7 @@ FileMover Is a Python program to move files automatically with the help of Pytho
 
 Cotributors for the Project
 [CodePerfectPLus](https://github.com/codePerfectPlus)
-Want to Contribute in project.Check Github Contribution Guide.
+Want to Contribute in project. Check Github Contribution Guide.
 
 ## Roadmap
 
@@ -81,7 +92,7 @@ For open-source projects, Under MIT License.
 ## Author
 
 - Module: FileMoverGUI
-- Author  : Py-Contributors
+- Author : Py-Contributors
 - Language: Python
 - Github: <https://github.com/codePerfectPlus>
 - Website: <http://codeperfectplus.herokuapp.com/>
