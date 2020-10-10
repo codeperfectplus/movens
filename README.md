@@ -56,9 +56,11 @@ FileMover Is a Python program to move files automatically with the help of Pytho
 
 ## Support
 
-Cotributors for the Project
-[CodePerfectPLus](https://github.com/codePerfectPlus)
-Want to Contribute in project. Check Github Contribution Guide.
+Cotributors for the Project.
+
+- [CodePerfectPLus](https://github.com/codePerfectPlus)
+- [AmiterCodes](https://github.com/AmiterCodes)
+- [Chems Eddine Senoussi](https://github.com/chemsedd)
 
 ## Roadmap
 
