@@ -31,7 +31,8 @@ folder_ex = {
     "Videos":  set([".mp4", ".webm", ".mkv", ".MPG", ".MP2", ".MPEG", ".MPE", ".MPV", ".OGG", ".M4P", ".M4V", ".WMV", ".MOV", ".QT", ".FLV", ".SWF", ".AVCHD", ".avi", ".mpg", ".mpe", ".mpeg", ".asf", ".wmv", ".mov", ".qt", ".rm"]),
     "Documents": set([".txt", ".pdf", ".doc", ".xlsx", ".pdf", ".ppt", ".pps", ".docx", ".pptx"]),
     "Music":  set([".mp3", ".wav", ".wma", ".mpa", ".ram", ".ra", ".aac", ".aif", ".m4a", ".tsa"]),
-    "Torrents": set([".torrent"])
+    "Torrents": set([".torrent"]),
+    "Others": set([])
 }
 
 
