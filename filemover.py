@@ -32,7 +32,7 @@ folder_ex = {
     "Documents": set([".txt", ".pdf", ".doc", ".xlsx", ".pdf", ".ppt", ".pps", ".docx", ".pptx"]),
     "Music":  set([".mp3", ".wav", ".wma", ".mpa", ".ram", ".ra", ".aac", ".aif", ".m4a", ".tsa"]),
     "Torrents": set([".torrent"]),
-    "Others": set([])
+    "Other": set([])
 }
 
 
