@@ -1,89 +1,55 @@
-# FileMover
+<h1 align="center">FileMover 📁</h1>
+<p align="center">CLI tool to arrange your files smartly with filemover`</p>
 
-[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)&nbsp;
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)&nbsp;
-![Update](https://img.shields.io/badge/update-monthly-green.svg)&nbsp;
+<p align="center">
+<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+<img src="https://img.shields.io/badge/update-Quarterly-green.svg" alt="update-montly">
+<img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="maintained">
+<img src="https://img.shields.io/readthedocs/filemover">
+</p>
 
-- [FileMover](#filemover)
-  - [Introduction](#introduction)
-    - [Python](#python)
-    - [FileMover](#filemover-1)
-  - [How To Run](#how-to-run)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Support](#support)
-  - [Roadmap](#roadmap)
-  - [Contributing](#contributing)
-  - [Authors and acknowledgment](#authors-and-acknowledgment)
-  - [License](#license)
-  - [Project status](#project-status)
-  - [Author](#author)
+- [Introduction](#introduction)
+- [How To Run](#how-to-run)
+- [Documentation](#documentation)
+- [Changelog](#changelog)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [Contributing](#contributing)
+- [License](#license)
+- [Project status](#project-status)
 
 ## Introduction
-
-### Python
-
-Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Python Automation To Arrange Files In One Click with the help of Python 3.0+.
-
-### FileMover
 
 This tool allows automatic file moving, each file to the folder that corresponds to its extension (e.g. ".jpg" ==> "/Pictures", ".mp4" ==> "/Videos")
 
 ## How To Run
 
-- Put in Download Folder Or Wherever You want to automatically move the file and Just run
-
-For CLI
-
 ```bash
-python filemover.py
+pip install filemover
 ```
 
-For GUI
+## Documentation
 
-```bash
-python filemovergui.py
-```
+Documentation is available at [filemover.readthedocs.io](https://filemover.readthedocs.io/en/latest/)
 
-## Installation
+## Changelog
 
-- This is A python 3 package.
-- Install Python 3.0+ or Anaconda 3.0+
+See [CHANGELOG.md](./CHANGELOG.md) 
 
 ## Usage
 
 FileMover Is a Python program to move files automatically with the help of Python. This will help you to manage your download folder for automatic cleanup.
 
-## Support
+## Contributors
 
-Cotributors for the Project.
+<a href="https://github.com/Py-Contributors/filemover/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Py-Contributors/filemover"/>
+</a>
 
-- [CodePerfectPLus](https://github.com/codePerfectPlus)
-- [AmiterCodes](https://github.com/AmiterCodes)
-- [Chems Eddine Senoussi](https://github.com/chemsedd)
-
-## Roadmap
-
-what's new in a future update
-
-- More File Extension will be added soon
-- Contributions are welcome
 
 ## Contributing
 
-Before submitting a bug, please do the following:
-
-Perform basic troubleshooting steps:
-
-- ### Make sure you are on the latest version. If you are not on the most recent version, your problem may have been solved already! Upgrading is always the best first step
-
-- ### Try older versions. If you are already on the latest release, try rolling back a few minor versions (e.g. if on 1.7, try 1.5 or 1.6) and see if the problem goes away. This will help the devs narrow down when the problem first arose in the commit log
-
-- ### Try switching up dependency versions. If the software in question has dependencies (other libraries, etc) try upgrading/downgrading those as well
-
-## Authors and acknowledgment
-
-Show your appreciation to those who have contributed to the project.
+check [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## License
 
@@ -91,10 +57,6 @@ For open-source projects, Under MIT License.
 
 ## Project status
 
-## Author
+This project is developed and maintained by [Py-Contributors](https://github.com/Py-Contributors/FileMover).
 
-- Module: FileMoverGUI
-- Author : Py-Contributors
-- Language: Python
-- Github: <https://github.com/codePerfectPlus>
-- Website: <http://codeperfectplus.herokuapp.com/>
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)

@@ -7,19 +7,17 @@ print(r'''
   / ____/____   ____/ /___     / __ \ ___   _____ / __/___   _____ / /_   / __ \ / /__  __ _____
  / /    / __ \ / __  // _ \   / /_/ // _ \ / ___// /_ / _ \ / ___// __/  / /_/ // // / / // ___/
 / /___ / /_/ // /_/ //  __/  / ____//  __// /   / __//  __// /__ / /_   / ____// // /_/ /(__  ) 
-\____/ \____/ \__,_/ \___/  /_/     \___//_/   /_/   \___/ \___/ \__/  /_/    /_/ \__,_//____/  1.0.4
+\____/ \____/ \__,_/ \___/  /_/     \___//_/   /_/   \___/ \___/ \__/  /_/    /_/ \__,_//____/  1.0.5
     
   | _____________________________________________________________________________________ |
   | || This Program will move files according to their extension in respective folders.|| |
   | ------------------------------------------------------------------------------------- |
-  | //                                     Version : 1.0.4                             // |
+  | //                                     Version : 1.0.5                             // |
   | //                                  Programming : Python3                          // |
   | //                                GitHub : py contributors                         // |
   | //                                Author : Py-Contributors                         // |  
   | //                             Email : pycontributors@gmail.com                    // |
-  | //                             Last Update : July 2022                             // |
-  | //                          Telegram : https://t.me/pycontributors                 // |
-  | //                       Website : http://codeperfectplus.herokuapp.com            // |
+  | //                             Last Update : November 2022                         // |
   | ------------------------------------------------------------------------------------- |
 ''')
 
@@ -50,7 +48,7 @@ def create_folder(folder_name: str):
         print('{} Already Exists'.format(folder_name))
 
 
-def move_files(file_folder_map: dict):
+def move_files(folder_path:str, file_folder_map: dict):
     '''
     Move files to respective folder
 
@@ -58,8 +56,11 @@ def move_files(file_folder_map: dict):
         ext_file_map (dict) : File to Folder map
     '''
     for folder, files in file_folder_map.items():
+        os.makedirs(os.path.join(folder_path, folder), exist_ok=True)
         for file in files:
-            move(file, folder)
+            old_file_path = os.path.join(folder_path, file)
+            new_file_path = os.path.join(folder_path, folder)
+            move(old_file_path, new_file_path)
 
 
 def get_folder(ext):
@@ -78,13 +79,16 @@ def get_folder(ext):
     return 'Other'
 
 
-def start():
+# TODO  need to change function name
+def start(folder_path: str):    
     '''
     Organize files on the current directory, each to the corresponding folder.
+    
+    folder_path: The path of the folder to be organized.
     '''
 
     file_folder_map = dict()
-    for filename in os.listdir():
+    for filename in os.listdir(folder_path):
         # ignore filemover.py, hidden files or a directory
         if filename == os.path.basename(__file__) or filename[0] == '.' or '.' not in filename:
             continue
@@ -106,8 +110,5 @@ def start():
         create_folder(folder)
 
     # move files to folder
-    move_files(file_folder_map)
+    move_files(folder_path, file_folder_map)
 
-
-if __name__ == '__main__':
-    start()
