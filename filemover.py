@@ -2,7 +2,6 @@ from shutil import move
 from os import path
 import os
 
-
 print(r'''
    ______            __         ____               ____             __     ____   __            
   / ____/____   ____/ /___     / __ \ ___   _____ / __/___   _____ / /_   / __ \ / /__  __ _____
@@ -25,7 +24,7 @@ print(r'''
 ''')
 
 folder_ex = {
-    'Programming Files': set(['ipynb', 'py', 'java', 'cs', 'js', 'vsix', 'jar', 'cc', 'ccc', 'html', 'xml', 'kt']),
+    'Programming Files': set(['ipynb', 'py', 'java', 'cs', 'js', 'vsix', 'jar', 'cc', 'ccc', 'html', 'xml', 'kt', 'c', 'css']),
     'Compressed': set(['zip', 'rar', 'arj', 'gz', 'sit', 'sitx', 'sea', 'ace', 'bz2', '7z']),
     'Applications': set(['exe', 'msi', 'deb', 'rpm']),
     'Pictures':  set(['jpeg', 'jpg', 'png', 'gif', 'tiff', 'raw', 'webp', 'jfif', 'ico', 'psd', 'svg', 'ai']),
@@ -37,19 +36,35 @@ folder_ex = {
 }
 
 
-def create_folders():
-    '''Creates the required folders to organize files ('Pictures', 'Videos'..).
+def create_folder(folder_name: str):
     '''
-    for root in folder_ex:
-        try:
-            os.mkdir(root)
-            print(f'{root:20} Created ✔')
-        except OSError:
-            print(f'{root:20} Already Exists')
+    Creates the folder
+
+    Args:
+        folder_name (str): folder to be created
+    '''
+    try:
+        os.mkdir(folder_name)
+        print('{} Created ✔'.format(folder_name))
+    except OSError:
+        print('{} Already Exists'.format(folder_name))
+
+
+def move_files(file_folder_map: dict):
+    '''
+    Move files to respective folder
+
+    Args:
+        ext_file_map (dict) : File to Folder map
+    '''
+    for folder, files in file_folder_map.items():
+        for file in files:
+            move(file, folder)
 
 
 def get_folder(ext):
-    '''Returns the Folder that corresponds to the given extension.
+    '''
+    Returns the Folder that corresponds to the given extension.
 
     Args:
         ext (String): The extension of the file.
@@ -64,17 +79,35 @@ def get_folder(ext):
 
 
 def start():
-    '''Organize files on the current directory, each to the corresponding folder.
     '''
+    Organize files on the current directory, each to the corresponding folder.
+    '''
+
+    file_folder_map = dict()
     for filename in os.listdir():
-        # Check it's not filemover.py, a hidden file or a directory
-        if filename != __file__ and filename[0] != '.' and '.' in filename:
-            ext = os.path.basename(filename).split('.')[-1]
-            folder = get_folder(ext)
-            if not os.path.isfile(os.path.join(folder, filename)):
-                move(filename, folder)
+        # ignore filemover.py, hidden files or a directory
+        if filename == os.path.basename(__file__) or filename[0] == '.' or '.' not in filename:
+            continue
+
+        file_extension = os.path.basename(filename).split('.')[-1]
+        folder = get_folder(file_extension)
+
+        # ignore files present in the folders
+        if os.path.isfile(os.path.join(folder, filename)):
+            continue
+
+        # insert file to file_folder_map
+        if folder not in file_folder_map:
+            file_folder_map[folder] = []
+        file_folder_map[folder].append(filename)
+
+    # create required folders
+    for folder in file_folder_map.keys():
+        create_folder(folder)
+
+    # move files to folder
+    move_files(file_folder_map)
 
 
 if __name__ == '__main__':
-    create_folders()
     start()
