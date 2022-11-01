@@ -1,9 +1,11 @@
 <h1 align="center">FileMover 📁</h1>
-<p align="center">Arrange your files smartly with filemover</p>
+<p align="center">CLI tool to arrange your files smartly with filemover`</p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
-<img src="https://img.shields.io/badge/update-monthly-green.svg" alt="update-montly">
+<img src="https://img.shields.io/badge/update-Quarterly-green.svg" alt="update-montly">
+<img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="maintained">
+<img src="https://img.shields.io/readthedocs/filemover">
 </p>
 
 - [Introduction](#introduction)
@@ -56,3 +58,5 @@ For open-source projects, Under MIT License.
 ## Project status
 
 This project is developed and maintained by [Py-Contributors](https://github.com/Py-Contributors/FileMover).
+
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
