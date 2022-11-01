@@ -56,9 +56,11 @@ def move_files(folder_path:str, file_folder_map: dict):
         ext_file_map (dict) : File to Folder map
     '''
     for folder, files in file_folder_map.items():
+        os.makedirs(os.path.join(folder_path, folder), exist_ok=True)
         for file in files:
-            os.makedirs(os.path.join(folder_path, folder), exist_ok=True)
-            move(os.path.join(folder_path, file), os.path.join(folder_path, folder))
+            old_file_path = os.path.join(folder_path, file)
+            new_file_path = os.path.join(folder_path, folder)
+            move(old_file_path, new_file_path)
 
 
 def get_folder(ext):
@@ -77,7 +79,8 @@ def get_folder(ext):
     return 'Other'
 
 
-def start(folder_path: str): # need to change function name
+# TODO  need to change function name
+def start(folder_path: str):    
     '''
     Organize files on the current directory, each to the corresponding folder.
     
