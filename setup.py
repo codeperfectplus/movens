@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="movens",
-    version="1.0.5",
+    version="1.0.6",
     author="CodePerfectPlus",
     author_email="deepak008@live.com",
     description="CLI tool to arrange files smartly",

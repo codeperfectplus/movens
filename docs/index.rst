@@ -1,7 +1,7 @@
 
 .. rst-class:: hide-header
 
-Welcome to FileMover's documentation!
+Welcome to Movens documentation!
 =====================================
 
 ![Download badge](http://pepy.tech/badge/filemover)

@@ -25,7 +25,7 @@ This tool allows automatic file moving, each file to the folder that corresponds
 ## How To Run
 
 ```bash
-pip install filemover
+pip install movens
 ```
 
 ## Documentation
