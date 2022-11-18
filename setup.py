@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="filemover",
+    name="movens",
     version="1.0.5",
     author="CodePerfectPlus",
     author_email="deepak008@live.com",
@@ -24,6 +24,6 @@ setuptools.setup(
     ],
     python_requires=">=3.1",
     entry_points={
-        "console_scripts": ["filemover = filemover.cli:main"],
+        "console_scripts": ["movens = movens.cli:main"],
     },
 )
