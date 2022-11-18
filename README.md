@@ -30,7 +30,7 @@ pip install movens
 
 ## Documentation
 
-Documentation is available at [filemover.readthedocs.io](https://filemover.readthedocs.io/en/latest/)
+Documentation is available at [Movens](https://movens.readthedocs.io/)
 
 ## Changelog
 
