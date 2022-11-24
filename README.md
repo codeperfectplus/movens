@@ -21,6 +21,7 @@
 - [License](#license)
 - [Project status](#project-status)
 
+
 ## Introduction
 
 This tool allows automatic file moving, each file to the folder that corresponds to its extension (e.g. ".jpg" ==> "/Pictures", ".mp4" ==> "/Videos")
