@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
 <img src="https://img.shields.io/badge/update-Quarterly-green.svg" alt="update-montly">
 <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="maintained">
-<img src="https://img.shields.io/readthedocs/filemover">
+<img src="https://img.shields.io/readthedocs/movens">
 </p>
 
 - [Introduction](#introduction)
