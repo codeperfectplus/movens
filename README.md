@@ -8,6 +8,9 @@
 <img src="https://img.shields.io/readthedocs/movens">
 </p>
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [How To Run](#how-to-run)
 - [Documentation](#documentation)

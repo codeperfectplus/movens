@@ -1,7 +1,7 @@
 from datetime import datetime
 
 project = 'movens'
-release = '1.0.6'
+release = '1.0.7'
 templates_path = ['_templates']
 source_suffix = ".rst"
 master_doc = "index"

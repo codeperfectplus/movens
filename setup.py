@@ -1,17 +1,18 @@
 import setuptools
+from movens.about import *
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="movens",
-    version="1.0.6",
-    author="CodePerfectPlus",
-    author_email="deepak008@live.com",
-    description="CLI tool to arrange files smartly",
+    name=__package_name__,
+    version=__version__,
+    author=__author__,
+    author_email=__email__,
+    description=__description__,
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Py-Contributors/FileMoverGUI",
+    url=__github__,
     keywords="filemover, movefiles, organizefiles, organizefiles, filemovergui, filemover-gui",
     packages=setuptools.find_packages(),
     classifiers=[
