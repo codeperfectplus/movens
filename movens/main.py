@@ -77,15 +77,16 @@ def classify_extension(extension: str) -> str:
 def organize_files_in_directory(folder_path: str) -> None:
     """
     Organize files in the given folder into subfolders based on their extensions.
-    
+
     Args:
         folder_path (str): Path of the folder to organize.
     """
-    folder = Path(folder_path)
+    folder = Path(folder_path).resolve()
     if not folder.exists():
         print(f"[!] Provided path does not exist: {folder_path}")
         return
 
+    current_dir_name = folder.name.lower()
     files_to_move = {}
 
     for item in folder.iterdir():
@@ -93,8 +94,19 @@ def organize_files_in_directory(folder_path: str) -> None:
             if item.name == Path(__file__).name:
                 continue  # Avoid moving the script itself
             extension = item.suffix[1:]  # Remove the dot
-            destination_folder = classify_extension(extension)
-            files_to_move.setdefault(destination_folder, []).append(item)
+            category_path = classify_extension(extension)
+            parts = category_path.split('/')
+            top_level = parts[0].lower()
+
+            # Determine actual destination path
+            if top_level == current_dir_name:
+                # Remove the top-level category from path
+                destination_folder = '/'.join(parts[1:]) if len(parts) > 1 else ''
+            else:
+                destination_folder = category_path
+
+            if destination_folder:  # Only move if there's a subfolder
+                files_to_move.setdefault(destination_folder, []).append(item)
 
     for category in files_to_move:
         full_folder_path = folder / category
@@ -105,6 +117,7 @@ def organize_files_in_directory(folder_path: str) -> None:
                 print(f"  ↳ Moved: {file.name} → {full_folder_path}")
             except Exception as e:
                 print(f"[✖] Could not move {file.name}: {e}")
+
 
 
 if __name__ == '__main__':
