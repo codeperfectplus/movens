@@ -119,7 +119,6 @@ def organize_files_in_directory(folder_path: str) -> None:
                 print(f"[✖] Could not move {file.name}: {e}")
 
 
-
 if __name__ == '__main__':
     import sys
     if len(sys.argv) > 1:

@@ -15,6 +15,6 @@ args = parser.parse_args()
 def main():
     organize_files_in_directory(args.path)
 
-    
+
 if __name__ == "__main__":
     main()

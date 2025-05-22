@@ -6,8 +6,6 @@ from movens.about import (
     __email__,
     __author__,
     __github__,
-    __pypi__,
-    __license__,
     __keywords__,
     __development_status__,
     __programming_language__,
