@@ -1,0 +1,24 @@
+/* Navbar customization */
+.navbar .toc {
+    display: none;  /* This will hide the TOC */
+}
+.navbar a {
+    color: #007bff; /* Link color */
+    padding: 10px 15px; /* Padding around links */
+}
+
+.navbar a:hover {
+    background-color: #e2e6ea; /* Background color on hover */
+    color: #0056b3; /* Darker link color on hover */
+}
+
+.navbar .navbar-brand {
+    font-weight: bold; /* Bold brand name */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+}
