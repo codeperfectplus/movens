@@ -12,7 +12,6 @@ from movens.about import (
     __license__,
     __operating_system__,
     __intended_audience__,
-    __intended_audience_developers__,
     __python_requires__,
 )
 
@@ -37,7 +36,6 @@ setuptools.setup(
         f"License :: {__license__}",
         f"Operating System :: {__operating_system__}",
         f"Intended Audience :: {__intended_audience__}",
-        f"Intended Audience :: {__intended_audience_developers__}",
     ],
     python_requires=__python_requires__,
     entry_points={
