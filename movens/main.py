@@ -1,94 +1,115 @@
-from shutil import move
 import os
+from pathlib import Path
+from shutil import move
 
-folder_ex = {
-    'Programming Files': set(['ipynb', 'py', 'java', 'cs', 'js', 'vsix', 'jar', 'cc', 'ccc', 'html', 'xml', 'kt', 'c', 'css']),
-    'Compressed': set(['zip', 'rar', 'arj', 'gz', 'sit', 'sitx', 'sea', 'ace', 'bz2', '7z']),
-    'Applications': set(['exe', 'msi', 'deb', 'rpm']),
-    'Pictures':  set(['jpeg', 'jpg', 'png', 'gif', 'tiff', 'raw', 'webp', 'jfif', 'ico', 'psd', 'svg', 'ai']),
-    'Videos':  set(['mp4', 'webm', 'mkv', 'MPG', 'MP2', 'MPEG', 'MPE', 'MPV', 'OGG', 'M4P', 'M4V', 'WMV', 'MOV', 'QT', 'FLV', 'SWF', 'AVCHD', 'avi', 'mpg', 'mpe', 'mpeg', 'asf', 'wmv', 'mov', 'qt', 'rm']),
-    'Documents': set(['txt', 'pdf', 'doc', 'xlsx', 'pdf', 'ppt', 'pps', 'docx', 'pptx']),
-    'Music':  set(['mp3', 'wav', 'wma', 'mpa', 'ram', 'ra', 'aac', 'aif', 'm4a', 'tsa']),
-    'Torrents': set(['torrent']),
-    'Other': set([])
+# Define categories with subfolders and file extensions
+FOLDER_STRUCTURE = {
+    # Programming
+    'Programming/Python': {'py', 'ipynb', 'pyd', 'pyc'},
+    'Programming/JavaScript': {'js', 'ts', 'tsx'},
+    'Programming/Java': {'java', 'jar'},
+    'Programming/C_CPP': {'c', 'cpp', 'cc', 'h', 'hpp'},
+    'Programming/CSharp': {'cs'},
+    'Programming/Web': {'html', 'css', 'xml', 'php'},
+    'Programming/Kotlin': {'kt'},
+    'Programming/VS Extensions': {'vsix'},
+    'Programming/Others': {'r', 'go', 'rs', 'dart', 'swift', 'lua', 'sh', 'bat'},
+
+    # Compressed files
+    'Compressed': {'zip', 'rar', 'arj', 'gz', 'bz2', '7z', 'xz', 'tar', 'iso'},
+
+    # Applications / Executables
+    'Applications/Windows': {'exe', 'msi'},
+    'Applications/Linux': {'deb', 'rpm', 'AppImage'},
+    'Applications/Android': {'apk'},
+
+    # Images
+    'Pictures/RAW': {'raw', 'arw', 'cr2', 'nef', 'orf', 'rw2', 'dng', 'raf', 'pef', 'srw', 'x3f', 'cr3'},
+    'Pictures/Photos': {'jpeg', 'jpg', 'png', 'gif', 'tiff', 'webp', 'bmp', 'ico', 'heic', 'jfif'},
+    'Pictures/3D': {'3ds', 'blend', 'fbx', 'obj', 'stl', 'dae', 'ply'},
+    'Pictures/Vector': {'svg', 'ai'},
+
+    # Videos
+    'Videos/Standard': {'mp4', 'webm', 'mkv', 'mov', 'avi', 'flv', 'wmv'},
+    'Videos/Legacy': {'qt', 'rm', 'vob', 'mpg', 'mpeg', 'm4v', '3gp', 'mts'},
+    'Videos/Streaming': {'ts'},
+
+
+    # Audio / Music
+    'Music': {'mp3', 'aac', 'wma', 'm4a', 'flac', 'ogg', 'opus', 'wav', 'aiff', 'ape', 'mid', 'midi', 'ra'},
+
+    # Torrents
+    'Torrents': {'torrent'},
+
+    # Documents
+    'Documents/PDF': {'pdf'},
+    'Documents/Word': {'doc', 'docx'},
+    'Documents/Excel': {'xls', 'xlsx', 'csv'},
+    'Documents/PowerPoint': {'ppt', 'pptx', 'pps'},
+    'Documents/Text': {'txt', 'md', 'rtf', 'log'},
+    'Documents/Notebooks': {'ipynb'},
+    'Documents/LaTeX': {'tex', 'bib'},
+    'Documents/Code Snippets': {'json', 'yaml', 'yml', 'toml', 'ini'},
+    'Documents/Others': {'odt', 'odp', 'ods', 'epub'},
+
+    # Fallback
+    'Other': set()
 }
 
 
-def create_folder(folder_name: str):
-    '''
-    Creates the folder
-
-    Args:
-        folder_name (str): folder to be created
-    '''
+def create_folder(path: Path) -> None:
+    """Create a folder if it doesn't exist."""
     try:
-        os.mkdir(folder_name)
-        print('{} Created ✔'.format(folder_name))
-    except OSError:
-        print('{} Already Exists'.format(folder_name))
+        path.mkdir(parents=True, exist_ok=True)
+        print(f"[✔] Folder ready: {path}")
+    except Exception as e:
+        print(f"[✖] Failed to create {path}: {e}")
 
 
-def move_files(folder_path:str, file_folder_map: dict):
-    '''
-    Move files to respective folder
-
-    Args:
-        ext_file_map (dict) : File to Folder map
-    '''
-    for folder, files in file_folder_map.items():
-        os.makedirs(os.path.join(folder_path, folder), exist_ok=True)
-        for file in files:
-            old_file_path = os.path.join(folder_path, file)
-            new_file_path = os.path.join(folder_path, folder)
-            move(old_file_path, new_file_path)
-
-
-def get_folder(ext):
-    '''
-    Returns the Folder that corresponds to the given extension.
-
-    Args:
-        ext (String): The extension of the file.
-
-    Returns:
-        String: The name of the Folder that holds the ext.
-    '''
-    for f, ex in folder_ex.items():
-        if ext in ex:
-            return f
+def classify_extension(extension: str) -> str:
+    """Return the folder path based on file extension."""
+    for folder, extensions in FOLDER_STRUCTURE.items():
+        if extension.lower() in extensions:
+            return folder
     return 'Other'
 
 
-# TODO  need to change function name
-def start(folder_path: str):    
-    '''
-    Organize files on the current directory, each to the corresponding folder.
+def organize_files_in_directory(folder_path: str) -> None:
+    """
+    Organize files in the given folder into subfolders based on their extensions.
     
-    folder_path: The path of the folder to be organized.
-    '''
+    Args:
+        folder_path (str): Path of the folder to organize.
+    """
+    folder = Path(folder_path)
+    if not folder.exists():
+        print(f"[!] Provided path does not exist: {folder_path}")
+        return
 
-    file_folder_map = dict()
-    for filename in os.listdir(folder_path):
-        # ignore filemover.py, hidden files or a directory
-        if filename == os.path.basename(__file__) or filename[0] == '.' or '.' not in filename:
-            continue
+    files_to_move = {}
 
-        file_extension = os.path.basename(filename).split('.')[-1]
-        folder = get_folder(file_extension)
+    for item in folder.iterdir():
+        if item.is_file() and not item.name.startswith('.') and '.' in item.name:
+            if item.name == Path(__file__).name:
+                continue  # Avoid moving the script itself
+            extension = item.suffix[1:]  # Remove the dot
+            destination_folder = classify_extension(extension)
+            files_to_move.setdefault(destination_folder, []).append(item)
 
-        # ignore files present in the folders
-        if os.path.isfile(os.path.join(folder, filename)):
-            continue
+    for category in files_to_move:
+        full_folder_path = folder / category
+        create_folder(full_folder_path)
+        for file in files_to_move[category]:
+            try:
+                move(str(file), str(full_folder_path / file.name))
+                print(f"  ↳ Moved: {file.name} → {full_folder_path}")
+            except Exception as e:
+                print(f"[✖] Could not move {file.name}: {e}")
 
-        # insert file to file_folder_map
-        if folder not in file_folder_map:
-            file_folder_map[folder] = []
-        file_folder_map[folder].append(filename)
 
-    # create required folders
-    for folder in file_folder_map.keys():
-        create_folder(folder)
-
-    # move files to folder
-    move_files(folder_path, file_folder_map)
-
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) > 1:
+        organize_files_in_directory(sys.argv[1])
+    else:
+        organize_files_in_directory(os.getcwd())

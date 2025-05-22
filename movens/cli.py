@@ -1,6 +1,6 @@
 import sys
 sys.path.append('.')
-from movens.main import start
+from movens.main import organize_files_in_directory
 from movens.about import __version__
 
 import argparse
@@ -13,7 +13,7 @@ args = parser.parse_args()
 
 
 def main():
-    start(args.path)
+    organize_files_in_directory(args.path)
 
     
 if __name__ == "__main__":
