@@ -1,7 +1,7 @@
 from datetime import datetime
 
-project = 'filemover'
-release = '1.0.5'
+project = 'movens'
+release = '1.0.7'
 templates_path = ['_templates']
 source_suffix = ".rst"
 master_doc = "index"
