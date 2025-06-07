@@ -39,6 +39,6 @@ setuptools.setup(
     ],
     python_requires=__python_requires__,
     entry_points={
-        "console_scripts": ["movens = movens.cli:main"],
+        "console_scripts": [f"{__package_name__} = {__package_name__}.cli:main"],
     },
 )
