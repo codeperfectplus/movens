@@ -1,7 +1,7 @@
 
 __title__ = 'Movens'
 __package_name__ = 'movens'
-__version__ = '1.0.7'
+__version__ = '1.0.8'
 __description__ = "CLI tool to arrange files smartly"
 __email__ = "deepak008@live.com"
 __author__ = 'codeperfectplus'
